@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Academia de Estética Ángeles en San Martín, Mendoza. Peluquería y maquillaje social. 90% práctica, cupos limitados." />
+  <meta name="description" content="Academia de Estética Ángeles. Peluquería y maquillaje social. 90% práctica, cupos limitados." />
   <meta name="theme-color" content="#000000" />
   <meta name="format-detection" content="telephone=no" />
-  <title>Academia de Estética Ángeles | San Martín, Mendoza</title>
+  <title>Academia de Estética Ángeles</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -76,7 +76,26 @@
       height: auto;
     }
 
-    .header-block { margin-bottom: 14px; }
+    .site-header {
+      margin-bottom: 14px;
+      padding: 28px 16px 26px;
+      text-align: center;
+      background: #000;
+    }
+
+    .site-title {
+      margin: 0;
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(22px, 7.2vw, 30px);
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(105deg, #bf953f, #fcf6ba 35%, #d4af37 55%, #fbf5b7 75%, #aa771c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
     .cursos {
       display: flex;
@@ -166,21 +185,17 @@
     .dato-text .dim { color: #e5e5e5; font-weight: 600; }
 
     .curso-cupos {
-      margin: 12px 0 0;
+      margin: 14px 0 0;
+      padding: 12px 10px;
       text-align: center;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--gold);
-    }
-
-    .curso-turnos {
-      margin: 6px 0 0;
-      text-align: center;
-      font-size: 11px;
-      color: #a3a3a3;
-      line-height: 1.4;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      background: rgba(212, 175, 55, 0.06);
     }
 
     .cta-block {
@@ -267,6 +282,8 @@
     @media (min-width: 391px) {
       :root { --max-w: 428px; --pad-x: 20px; }
       .page { padding-top: 16px; }
+      .site-header { padding: 32px 18px 30px; }
+      .site-title { font-size: 30px; }
       .btn-gold { font-size: 14px; min-height: 56px; }
       .curso-titulo .nombre { font-size: 19px; }
     }
@@ -276,19 +293,8 @@
 
   <div class="page">
     <main>
-      <h1 class="sr-only">Academia de Estética Ángeles — San Martín, Mendoza</h1>
-
-      <header class="header-block gold-border">
-        <img
-          class="block-img"
-          src="header-flyer.png"
-          alt="Academia de Estética Ángeles — San Martín. Formación profesional premium"
-          width="1408"
-          height="153"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
+      <header class="site-header gold-border">
+        <h1 class="site-title">Academia de Estética Ángeles</h1>
       </header>
 
       <section class="cursos" aria-label="Cursos disponibles">
@@ -339,7 +345,6 @@
               </li>
             </ul>
             <p class="curso-cupos">Cupos limitados</p>
-            <p class="curso-turnos">Turnos: lunes y miércoles · 11:00 y 14:00 a 17:00</p>
           </div>
         </article>
 
@@ -389,7 +394,6 @@
               </li>
             </ul>
             <p class="curso-cupos">Cupos limitados</p>
-            <p class="curso-turnos">Turnos: lunes y miércoles · 10:00 y 16:00 a 19:00</p>
           </div>
         </article>
 
